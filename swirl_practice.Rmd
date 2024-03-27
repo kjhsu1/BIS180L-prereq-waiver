@@ -1,11 +1,93 @@
 # Swirl Practice
 #### Exercise 1:
 Sum of numbers
-```
+```{r}
 sum(2000:20000)
 ```
-Answer is: 198011000
 
 #### Exercise 2:
+Objects
+
+```{r}
+a <- 5
+b <- 2:20
+a
+b
+```
+
+* line 1 initializes variable a with integer value 5, and line 2 initializes variable b with vector containing values from 2 to 20 inclusive (ie. 2, 3, 4, 5... 19, 20)
+
+* line 3 prints variable a, and line 4 prints variable b
+
+#### Exercise 3:
+
+```
+d <- "I just want to be deleted"
+d
+ls() #note that you have to include the parentheses for a function even if no arguments are needed.
+rm(d)
+ls()
+d #generates an error because we removed it
+```
+
+Using '+'
+```{r}
+c <- a + b
+c
+```
+Using 'sum()'
+```{r}
+c <- sum(a, b)
+c
+```
+We get different results because + adds 5 to all elements in the vector b while sum() adds 5 and all elements in vector b together to get one integer output. 
+
+#### Exercise 4
+Sum of 5th and 10th element of vector b
+```{r}
+sum(b[c(5, 10)])
+```
+#### Exercise 5
+Sum of 3rd, 8th, and 10th element of b
+```{r}
+sum(b[c(3, 8, 10)])
+```
+
+#### Exercise 6 
+```{r}
+m <- matrix(data=1:25,ncol=5,byrow=T)
+m
+m[5,5]
+```
+
+* First number is rows, second is coloumns
+
+* m[3,] will print out the 3rd row of matrix m
+```{r}
+m[3,]
+```
+Extract 3rd, 4th, and 5th column of m together as one object
+```{r}
+m[,c(3, 4, 5)]
+```
+
+#### Exercise 7
+```{r}
+cbind(m, 101:105)
+```
+* cbind combines matrices, vectors, and dataframes by coloumns
+* rbind does the samething but for rows
+```{r}
+m
+n <- rbind(rep(0, 5), m)
+n
+```
+
+
+
+
+
+
+
 
 
