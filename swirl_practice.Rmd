@@ -1,0 +1,11 @@
+# Swirl Practice
+#### Exercise 1:
+Sum of numbers
+```
+sum(2000:20000)
+```
+Answer is: 198011000
+
+#### Exercise 2:
+
+
