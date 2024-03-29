@@ -1,0 +1,31 @@
+# Height GGplot
+
+#### Import tidyverse
+```{r setup}
+library(tidyverse)
+```
+
+#### Import CSV file
+```{r}
+library(readr)
+data <- read_csv("/Users/kentahsu/Downloads/height_data_clean.csv")
+```
+
+#### Trend Line of height_cm
+```{r}
+data %>%
+  ggplot(aes(x=survey_date, y=height_cm, group=pop, color=pop)) +
+  geom_point() +
+  geom_smooth(method="lm")
+```
+
+#### Box Plot
+
+```{r}
+data %>%
+  filter(survey_date == "2023-01-27") %>%
+  ggplot(aes(x=pop, y=height_cm, group=pop)) +
+  geom_boxplot()
+
+```
+
